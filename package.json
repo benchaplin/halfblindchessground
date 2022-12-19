@@ -1,12 +1,44 @@
 {
-  "name": "chessground",
-  "version": "8.3.5",
-  "description": "lichess.org chess ui",
+  "name": "halfblindchessground",
+  "version": "0.1.1",
+  "author": "Ben Chaplin <benchaplin@protonmail.ch>",
+  "license": "ISC",
+  "description": "A chess UI for the half-blind chess variant",
+  "homepage": "https://github.com/benchaplin/halfblindchessground",
+  "keywords": [
+      "half",
+      "blind",
+      "chess",
+      "half-blind",
+      "halfblind",
+      "halfblindchess",
+      "halfblindchessground"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/benchaplin/halfblindchessground.git"
+  },
   "type": "module",
   "module": "chessground.js",
   "typings": "chessground.d.ts",
+  "files": [
+    "/*.js",
+    "/*.d.ts",
+    "/*.js.map",
+    "/assets/*.css",
+    "/src/*.ts",
+    "!/rollup.config.js"
+  ],
+  "scripts": {
+    "prepare": "$npm_execpath run compile",
+    "compile": "tsc --outDir . --sourceMap --declaration",
+    "lint": "eslint src/*.ts",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "dist": "rollup --config"
+  },
   "dependencies": {
-    "halfblindchess": "^1.0.2"
+    "halfblindchess": "1.0.4"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8",
@@ -18,36 +50,5 @@
     "rollup-plugin-terser": "^7",
     "tslib": "^2",
     "typescript": "^4"
-  },
-  "scripts": {
-    "prepare": "$npm_execpath run compile",
-    "compile": "tsc --outDir . --sourceMap --declaration",
-    "lint": "eslint src/*.ts",
-    "format": "prettier --write .",
-    "check-format": "prettier --check .",
-    "dist": "rollup --config"
-  },
-  "files": [
-    "/*.js",
-    "/*.d.ts",
-    "/*.js.map",
-    "/assets/*.css",
-    "/src/*.ts",
-    "!/rollup.config.js"
-  ],
-  "repository": "https://github.com/lichess-org/chessground",
-  "keywords": [
-    "chess",
-    "lichess",
-    "lichess.org",
-    "chessboard",
-    "ui",
-    "typescript"
-  ],
-  "author": "Thibault Duplessis (https://github.com/ornicar)",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/lichess-org/chessground/issues"
-  },
-  "funding": "https://lichess.org/patron"
+  }
 }

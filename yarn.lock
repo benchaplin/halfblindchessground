@@ -140,10 +140,10 @@
     "estree-walker" "^1.0.1"
     "picomatch" "^2.2.2"
 
-"@types/chess.js@^0.10.1":
-  "integrity" "sha512-cuFMyrUYOWpKm5PRayvk22jLV3BOuWs7iJ7Q4PZJXMWoF7uhjWEojMS4GPk441gn4Ki9BHxbKsll7mrwJ3KT3g=="
-  "resolved" "https://registry.npmjs.org/@types/chess.js/-/chess.js-0.10.1.tgz"
-  "version" "0.10.1"
+"@types/chess.js@0.11.0":
+  "integrity" "sha512-dwb29C90HRq9D4mbROGSe7CiUhrOcvoujLLTmM1A50/O37d/FyXWDhFjy3EMmbolNU3piySb+uQZIMdE4SShuA=="
+  "resolved" "https://registry.npmjs.org/@types/chess.js/-/chess.js-0.11.0.tgz"
+  "version" "0.11.0"
 
 "@types/estree@0.0.39":
   "integrity" "sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw=="
@@ -337,7 +337,7 @@
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
 
-"chess.js@^0.11.0":
+"chess.js@0.11.0":
   "integrity" "sha512-yTpi6XbRMkBtnjSvbt6wEp9Y7JzhJl1MC3GNn67q5ClyccXxCRf5cMPSUg4OblrUapg1kLHm7WzxxEVp20NK1Q=="
   "resolved" "https://registry.npmjs.org/chess.js/-/chess.js-0.11.0.tgz"
   "version" "0.11.0"
@@ -685,13 +685,13 @@
   "resolved" "https://registry.npmjs.org/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz"
   "version" "1.0.4"
 
-"halfblindchess@^1.0.2":
-  "integrity" "sha512-N/d2v8tDL/Ctqqk/U+NIM53LTEJX691PvRQz19O+exAzyYYk32DS0GEi0vkkk2j4Ag85nW9KDikRkHThCHKI/Q=="
-  "resolved" "https://registry.npmjs.org/halfblindchess/-/halfblindchess-1.0.2.tgz"
-  "version" "1.0.2"
+"halfblindchess@1.0.4":
+  "integrity" "sha512-Y8VZP4XnAfpYnxjTf3pqB9WloWs/WekACozFqzqXDZZESXsILvNs87UwzxwMOs3VkcXtmUnK9IfgrdH19F6UlA=="
+  "resolved" "https://registry.npmjs.org/halfblindchess/-/halfblindchess-1.0.4.tgz"
+  "version" "1.0.4"
   dependencies:
-    "@types/chess.js" "^0.10.1"
-    "chess.js" "^0.11.0"
+    "@types/chess.js" "0.11.0"
+    "chess.js" "0.11.0"
 
 "has-flag@^3.0.0":
   "integrity" "sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw=="

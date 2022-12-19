@@ -2,6 +2,20 @@
 
 Fork of [https://github.com/lichess-org/chessground](https://github.com/lichess-org/chessground).
 
+## Installation
+
+To install the stable version:
+
+```
+# npm
+npm install halfblindchessground
+
+# yarn
+yarn add halfblindchessground
+```
+
+## Usage
+
 There is a piece of new [config](https://github.com/benchaplin/halfblindchessground/tree/master/src/config.ts)/[state](https://github.com/benchaplin/halfblindchessground/tree/master/src/state.ts):
 
 ```js
@@ -12,7 +26,7 @@ This state must be controlled by the user in the `events.after` function, like s
 
 ```js
 function afterExample(orig, dest) {
-  const move = chess.move({ from: orig, to: dest });
+  const move = halfBlindChess.move({ from: orig, to: dest });
   cg.set({
     halfBlindMove: move.halfBlind
       ? move
