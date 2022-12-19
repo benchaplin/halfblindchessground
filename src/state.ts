@@ -4,11 +4,13 @@ import { DragCurrent } from './drag.js';
 import { Drawable } from './draw.js';
 import { timer } from './util.js';
 import * as cg from './types.js';
+import { HalfBlindMove } from 'halfblindchess';
 
 export interface HeadlessState {
   pieces: cg.Pieces;
   orientation: cg.Color; // board orientation. white | black
   turnColor: cg.Color; // turn to play. white | black
+  halfBlindMove?: HalfBlindMove | number; // half-blind move on the board or number of moves until the next
   check?: cg.Key; // square currently in check "a2"
   lastMove?: cg.Key[]; // squares part of the last move ["c3"; "c4"]
   selected?: cg.Key; // square currently selected "a1"
@@ -109,6 +111,7 @@ export function defaults(): HeadlessState {
     pieces: fen.read(fen.initial),
     orientation: 'white',
     turnColor: 'white',
+    halfBlindMove: 1,
     coordinates: true,
     ranksPosition: 'right',
     autoCastle: true,

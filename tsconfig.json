@@ -2,6 +2,7 @@
   "include": ["src/*.ts"],
   "exclude": [],
   "compilerOptions": {
+    "moduleResolution": "node",
     "noEmitOnError": false,
     "strict": true,
     "noUnusedLocals": true,

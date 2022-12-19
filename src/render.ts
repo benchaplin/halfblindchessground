@@ -45,6 +45,12 @@ export function render(s: State): void {
       anim = anims.get(k);
       fading = fadings.get(k);
       elPieceName = el.cgPiece;
+      // half-blind handling
+      if (pieceAtKey?.halfBlind) {
+        el.classList.add('ghost');
+      } else {
+        el.classList.remove('ghost');
+      }
       // if piece not being dragged anymore, remove dragging style
       if (el.cgDragging && (!curDrag || curDrag.orig !== k)) {
         el.classList.remove('dragging');

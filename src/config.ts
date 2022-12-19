@@ -2,12 +2,14 @@ import { HeadlessState } from './state.js';
 import { setCheck, setSelected } from './board.js';
 import { read as fenRead } from './fen.js';
 import { DrawShape, DrawBrushes } from './draw.js';
+import { HalfBlindMove } from 'halfblindchess';
 import * as cg from './types.js';
 
 export interface Config {
   fen?: cg.FEN; // chess position in Forsyth notation
   orientation?: cg.Color; // board orientation. white | black
   turnColor?: cg.Color; // turn to play. white | black
+  halfBlindMove?: HalfBlindMove | number; // half-blind move on the board or number of moves until the next
   check?: cg.Color | boolean; // true for current color, false to unset
   lastMove?: cg.Key[]; // squares part of the last move ["c3", "c4"]
   selected?: cg.Key; // square currently selected "a1"

@@ -126,7 +126,18 @@ export function baseNewPiece(state: HeadlessState, piece: cg.Piece, key: cg.Key,
 }
 
 function baseUserMove(state: HeadlessState, orig: cg.Key, dest: cg.Key): cg.Piece | boolean {
-  const result = baseMove(state, orig, dest);
+  let result: cg.Piece | boolean = true;
+  if (state.halfBlindMove === 0) { // this move is half-blind
+    const piece = state.pieces.get(orig);
+    state.pieces.set(orig, { ...piece!, halfBlind: true });
+  } else {
+    if (typeof state.halfBlindMove !== "number") { // the last move was half-blind
+      const piece = state.pieces.get(state.halfBlindMove!.from);
+      state.pieces.set(state.halfBlindMove!.from, { ...piece!, halfBlind: false });
+      baseMove(state, state.halfBlindMove!.from, state.halfBlindMove!.to);
+    }
+    result = baseMove(state, orig, dest);
+  }
   if (result) {
     state.movable.dests = undefined;
     state.turnColor = opposite(state.turnColor);

@@ -9,6 +9,7 @@ export interface Piece {
   role: Role;
   color: Color;
   promoted?: boolean;
+  halfBlind?: boolean;
 }
 export interface Drop {
   role: Role;
