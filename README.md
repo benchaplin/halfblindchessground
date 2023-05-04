@@ -22,7 +22,7 @@ There is a piece of new [config](https://github.com/benchaplin/halfblindchessgro
 halfBlindMove?: HalfBlindMove | number; // half-blind move on the board or number of moves until the next
 ```
 
-This state must be controlled by the user in the `events.after` function, like so:
+This state can be controlled by the user in the `events.after` function, like so:
 
 ```js
 function afterExample(orig, dest) {
